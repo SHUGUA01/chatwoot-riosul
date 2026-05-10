@@ -13,8 +13,8 @@ declare global {
 }
 
 export function ChatwootWidget({
-  websiteToken = import.meta.env.VITE_CHATWOOT_TOKEN ?? "",
-  baseUrl = import.meta.env.VITE_CHATWOOT_URL ?? "https://app.chatwoot.com",
+  websiteToken = import.meta.env.VITE_CHATWOOT_TOKEN ?? "ZDpseBZXKZ8U7vUfreExQEB1",
+  baseUrl = import.meta.env.VITE_CHATWOOT_URL ?? "https://interfaz-grafica-chatwoot.ugq8mb.easypanel.host",
 }: Props) {
   useEffect(() => {
     if (!websiteToken) return;
