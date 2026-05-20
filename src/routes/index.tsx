@@ -12,7 +12,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Inmobiliaria Rio Sul" },
-      { name: "description", content: "Inmobiliaria Rio Sul — espacios futuristas con asistente IA disponible 24/7." },
+      {
+        name: "description",
+        content: "Inmobiliaria Rio Sul — espacios futuristas con asistente IA disponible 24/7.",
+      },
     ],
   }),
   component: Index,
@@ -62,7 +65,7 @@ function Index() {
           height={1024}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/70 to-background" />
         <div className="relative mx-auto max-w-5xl px-6 py-32 text-center md:py-48">
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-primary">
             Inmobiliaria
@@ -79,11 +82,10 @@ function Index() {
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">
             Asistente IA
           </p>
-          <h2 className="mt-3 text-3xl font-light md:text-4xl">
-            Pregúntale lo que necesites
-          </h2>
+          <h2 className="mt-3 text-3xl font-light md:text-4xl">Pregúntale lo que necesites</h2>
           <p className="mt-4 text-muted-foreground">
-            Toca una pregunta y el chat se abrirá lista para enviarla. También puedes escribir la tuya.
+            Toca una pregunta y el chat se abrirá lista para enviarla. También puedes escribir la
+            tuya.
           </p>
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
@@ -92,10 +94,15 @@ function Index() {
               key={q}
               type="button"
               onClick={() => openChat(q)}
-              className="group flex items-start justify-between gap-4 rounded-2xl border border-border bg-card p-6 text-left transition hover:border-primary/60 hover:shadow-[var(--shadow-soft)]"
+              className="group flex items-start justify-between gap-4 rounded-2xl border border-border bg-card p-6 text-left transition hover:border-primary/60 hover:shadow-(--shadow-soft)"
             >
               <span className="text-base font-medium">{q}</span>
-              <span aria-hidden className="text-primary transition-transform group-hover:translate-x-1">→</span>
+              <span
+                aria-hidden
+                className="text-primary transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
             </button>
           ))}
         </div>
