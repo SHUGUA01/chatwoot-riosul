@@ -46,17 +46,10 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
           <span className="text-sm font-semibold tracking-[0.2em] uppercase text-foreground">
             Rio Sul
           </span>
-          <button
-            type="button"
-            onClick={() => openChat()}
-            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] hover:opacity-90"
-          >
-            Chatear
-          </button>
         </div>
       </header>
 
