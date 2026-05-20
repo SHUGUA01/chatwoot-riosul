@@ -23,7 +23,7 @@ export function ChatwootWidget({
     window.chatwootSettings = {
       position: "right",
       type: "expanded_bubble",
-      launcherTitle: "Habla con el coach IA",
+      launcherTitle: "Chatea con nosotros",
     };
 
     const script = document.createElement("script");
