@@ -26,6 +26,21 @@ export function ChatwootWidget({
       launcherTitle: "Chatea con nosotros",
     };
 
+    if (!document.getElementById("chatwoot-style")) {
+      const style = document.createElement("style");
+      style.id = "chatwoot-style";
+      style.textContent = `
+        .woot-widget-bubble,
+        .woot-widget-bubble.woot-elements--right,
+        .woot--bubble-holder .woot-widget-bubble,
+        .woot-widget-bubble.woot--bubble {
+          background: #2563eb !important;
+        }
+        .woot-widget-bubble:hover { background: #1d4ed8 !important; }
+      `;
+      document.head.appendChild(style);
+    }
+
     const script = document.createElement("script");
     script.id = "chatwoot-sdk";
     script.src = `${baseUrl}/packs/js/sdk.js`;
